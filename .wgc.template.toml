@@ -1,0 +1,25 @@
+# 使用 toml 作为配置文件格式
+# https://toml.io/cn/v1.0.0
+
+[global]
+git_remote_url = "" # git 远程仓库地址
+jira_url = ""       # jira 地址
+jekins_url = ""     # jenkins 地址
+
+[[projects]]
+name = ""     # 项目名称
+repo = ""     # 仓库名称
+pipeline = "" # jenkins 流水线名称
+qas_url = ""  # 项目 qas 地址
+
+[[projects.requests]]
+jira_tag = ""    # jira tag
+description = "" # 需求描述
+branch = ""      # 代码分支
+status = ""      # 需求状态
+
+[[projects.releases]]
+branch = ""                   # release 分支
+status = ""                   # release 状态
+pipeline_tag = ""             # jenkins 流水线 tag
+linked_requests_branches = [] # 关联的需求分支
